@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oromgoh</title>
+    <link rel="icon" href="./assets/image 1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        /* Reset CSS */
+        * { margin: 0; padding: 0;}
+        header, footer { display: block; }
+        img { max-width: 100%; height: auto; }
+        a { color: black; }
+        /* Global Styles */
+        body { font-family: SF Pro Display,sans-serif; }
+        /* Header Styles */
+        .container { max-width: 1090px; margin: 0 auto; }
+        header { padding: 9px 0px; border-bottom: 1px solid rgba(79, 79, 79, 0.462); border-bottom-style: dashed; }
+        .header__content { display: flex; justify-content: space-between; align-items: center; padding-right: 35px; }
+        .logo-section, .info-section { display: flex; align-items: center; }
+        .logo-section .logo-section__text { white-space: nowrap; margin-left: 15px; font-size: 12px; font-weight: 700; line-height: 17x; color: #00428E; }
+        .info-section .info-section__text, .a { margin-left: 11px; font-size: 13px; font-weight: 700; color: #00428E; text-decoration: none; }
+        /* Ticket Styles  */
+        .ticket { width: 100%; max-width: 1090px; }
+        .ticket__overflow { overflow: hidden; }
+        .ticket__round { border-radius: 30px; background-color: white; display: grid; grid-template-columns: repeat(10, 1fr); padding-top: 11px; padding-bottom: 11px; border: 1px solid black; z-index: 1; }
+        .ticket__relative { position: relative; grid-column: span 2; width: 100%; height: 100%; transform: translate(9%, 30%);  }
+        
+        .ticket__rotate { transform: rotate(-90deg); display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 180px; position: relative; text-align: center; }
+        .ticket__flex { display: flex; flex-direction: column; gap: 2px; text-align: center; }
+        .ticket__flex .ticket__text--black { color: black; font-size: 15px; }
+        .ticket__flex h3 { font-size: 40px; }
+        .ticket__hw { transform: rotate(-90deg); height: 27px; width: 22%; text-align: center; }
+        .ticket__cl--bold { color: black;font-weight: 700; font-size: 9px; white-space: nowrap; }
+
+        .ticket__absolute--1 { position: absolute; width: 50px; height: 56px; border-radius: 47%; background-color: white; border-width: 1px; border-style: solid; border-color: black; right: -36px; top: 70%; z-index: 2; }
+        .ticket__absolute--2 { position: absolute; width: 50px; height: 56px; border-radius: 47%; background-color: white; border-width: 1px; border-style: solid; border-color: black; right: -36px; bottom: 130%; z-index: 2; }
+
+        .ticket__column { grid-column: span 7; padding-left: 20px; width: 100%; /* border-left-width: 1px; */ /* border-style: dashed; */ border-left: dashed; border-color: black; margin-left: 21px;  }
+        .ticket__fl { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(79, 79, 79, 0.462); border-bottom-style: dashed; width: 100%; padding-bottom: 10px; }
+        .ticket__fl2 { /* flex flex-col gap-[4px] mb-[17px] */ display: flex; flex-direction: column; gap: 4px; margin-bottom: 13px; }
+        .ticket__fl2 .ticket__text--black { color: black; font-size: 10px; }
+        .ticket__fl2 .ticket__text--black-font { color: black; font-weight: 700; font-size: 11px;}
+        .ticket__fl3 { display: flex; flex-direction: column; gap: 4px; margin-bottom: 9px; }
+        .ticket__fl3 .ticket__text--black { color: black; font-size: 12px; }
+        .ticket__fl3 .ticket__text--black-font { color: black; font-weight: 700; font-size: 11px; }
+
+        .ticket__width--full { width: 100%; max-width: 130px; }
+        .ticket__width--full .ticket__gap { display: flex; flex-direction: column; gap: 10px; }
+        .ticket__width--full .ticket__gap .ticket__text--center-text { text-align: center; color: black; font-size: 15px; }
+        .ticket__width--full .ticket__gap img { width: 100%; margin: 0 auto; }
+        
+        .ticket__flex--long { display: flex; justify-content: space-between; margin-top: 17px; }
+        .ticket__flex--long .ticket__flex--column1 { display: flex; flex-direction: column; gap: 12px; }
+        .ticket__flex--long .ticket__flex--column2 { display: flex; flex-direction: column; gap: 4px; }
+        .ticket__flex--long .ticket__flex--column2 .ticket__text--black { color: #000000; font-size: 12px; }
+        .ticket__flex--long .ticket__flex--column2 .ticket__text--black-bold { font-size: 11px; }
+
+        .ticket__absolute--up { position: absolute; width: 230px; height: 258px; border-radius: 258px; background-color: white; border-width: 1px; border-style: solid; border-color: black; top: -83px; left: -225px; z-index: 1; }
+        /* Main Section Styles */
+        .main-section { padding: 31px 0; }
+        .top__br { border-top: 1px solid rgba(79, 79, 79, 0.462); border-top-style: dashed; }
+        .main-section__container2 { max-width: 875px; margin: 0 auto; }
+        .main-section h1 { margin-top: 5px; margin-bottom: 17px; }
+        .main-section2 { padding-top: 21px; padding-bottom: 17px; }
+        .main-section2 .h2 { font-size: 21px; margin-bottom: 3px; }
+        .contents { padding: 15px 0; border-bottom: 1px solid rgb(212, 212, 212); }
+        .contents .contents__image { padding: 18px; }
+        .contents h4 { padding: 0px 3px; }
+        .contents p { font-size: 12px; }
+        .contents .txt { line-height: 19px; padding-top: 11px; }
+        .contents .text { padding: 2px 5px; font-size: 12px; }
+        .contents .cl { color: #00428E; text-decoration: none; }
+        /* Footer Styles */
+        footer { padding: 22px 0; }
+        .footer__flex { display: flex; align-items: center; justify-content: space-between; gap: 1px; padding-top: 14px; }
+        .text { width: 80%; display: flex; align-items: baseline; gap: 5px; color: #212121f3; font-size: 9px; font-weight: 400; }
+        .text p { margin-right: 20px; }
+        .text .text__line { width: 40%;}
+        .social-links { font-size: 14px; }
+        .social-links a { text-decoration: none; margin-right: 8px; }
+    </style>
+</head>
+<body> <!-- onload="window.print()" -->
+    <header>
+        <div class="container">    
+            <div class="header__content">
+                <div class="logo-section">
+                    <img src="https://www.oromgohlar.uz/favicon.ico" alt="logo" class="logo-section__image" style="width: 55px;">
+                    <p class="logo-section__text">Детские оздоровительные лагеря <br> Республики Узбекистан</p>
+                </div>
+                <div class="info-section">
+                    <img src="./assets/Line 30.png" alt="l" class="info-section__image">
+                    <a href="/" class="info-section a">
+                      <p class="info-section__text">www.oromgoh.com</p>
+                      <!-- <img src="./assets/external-link.png" alt="link" class="info-section__image"> -->
+                      <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 65px; margin-top: -3px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="main-section">
+            <div class="container main-section__container">
+              <div class="ticket">
+                <div class="ticket__overflow">
+                  <div
+                    class="ticket__round">
+                    <div class="ticket__relative">
+                      <div class="ticket__rotate">
+                        <div class="ticket__flex">
+                          <p class="ticket__text--black">
+                            Номер путевки
+                          </p>
+                          <h4 class="ticket__text--dark-gray" style="font-size: 21px;">
+                            81387421
+                          </h4>
+                        </div>
+                        <div class="ticket__hw">
+                          <img src="./assets/Barcode.png" alt="br" style="text-align: center;">
+                        </div>
+                        <h6 class="ticket__cl--bold">
+                          Дата покупки 01-03-2024 10:51
+                        </h6>
+                      </div>
+                      <div class="ticket__absolute--up"></div>
+                      <div class="ticket__absolute--1"></div>
+                      <div class="ticket__absolute--2"></div>
+
+                    </div>
+                    <div class="ticket__column">
+                      <div class="ticket__fl">
+                        <div>
+                          <div class="ticket__fl2">
+                            <p class="ticket__text--black">
+                              Название лагеря
+                            </p>
+                            <h2  class="ticket__text--black-font">
+                              ДОЛ “Угам”
+                            </h2>
+                          </div>
+                          <div class="ticket__fl3">
+                            <p class="ticket__text--black">
+                              Ребенок
+                            </p>
+                            <h2  class="ticket__text--black-font">
+                              Махкамов Бехзодхон Бахром угли, 12 лет
+                            </h2>
+                          </div>
+                          <div class="ticket__fl3">
+                            <p class="ticket__text--black">
+                              Даты смены
+                            </p>
+                            <h2 class="ticket__text--black-font">
+                              1 июня – 14 июня (14 дней)
+                            </h2>
+                          </div>
+                        </div>
+                        <div class="ticket__width--full">
+                          <div class="ticket__gap">
+                            <p class="ticket__text--center-text">
+                              Онлайн путевка
+                            </p>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/1024px-QR_Code_Example.svg.png" alt="qrcode" style="text-align: center;">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ticket__flex--long">
+                        <div class="ticket__flex--column1">
+                          <div class="ticket__flex--column2">
+                            <p class="ticket__text--black">
+                              Точка сбора
+                            </p>
+                            <h4 class="ticket__text--black-bold" >
+                              Пахтакор кўчаси 5, Тоshkent
+                            </h4>
+                          </div>
+              
+                          <div class="ticket__flex--column2">
+                            <p class="ticket__text--black fon">
+                              Точка возврата
+                            </p>
+                            <h4 class="ticket__text--black-bold">
+                              Пахтакор кўчаси 5, Тоshkent
+                            </h4>
+                          </div>
+                        </div>
+                        <div class="ticket__flex--column1">
+                          <div class="ticket__flex--column2">
+                            <p class="ticket__text--black">
+                              Дата и время выезда
+                            </p>
+                            <h4 class="ticket__text--black-bold">
+                              1 июнь 2024 7:00
+                            </h4>
+                          </div>
+                          <div class="ticket__flex--column2">
+                            <p class="ticket__text--black">
+                              Дата и время прибытия
+                            </p>
+                            <h4 class="ticket__text--black-bold">
+                              14 июнь 2024 18:00
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>          
+            </div>
+        </section>
+
+        <section class="main-section2 top__br">
+            <div class="container2 main-section__container2">
+                <h2 class="h2">Что дальше?</h2>
+                <div class="contents">
+                  <h5>1. Получение медицинской справки</h5>
+                  <p class="txt">Перед поездкой получите медицинскую справку <a href="/" class="cl">(форма 079/у)</a> в поликлинике по месту прописки вашего ребенка.</p>
+                  <!-- <img src="./assets/Rectangle 1061.png" alt="line" class="contents__image"> -->
+                </div>
+                <div class="contents">
+                  <h5>2. Подготовка необходимых вещей</h5>
+                  <p class="txt">Убедитесь, что у ребенка собраны все необходимые вещи для комфортного пребывания в лагере. 
+                  <br> Перечень вещей доступен <a href="/" class="cl">здесь</a>.
+                  </p>
+                </div>
+                <div class="contents">
+                  <h5>3. Точка и время сбора</h5>
+                  <p class="txt">Необходимо прибыть до 12 июня 2024 года до 12:00 по адресу: Прокурор кучаси 23, Ташкент. <a href="/">Показать на карте</a> 
+                  <br> Не забудьте взять с собой:
+                  </p>
+                  <p class="text">1. Копию документа, удостоверяющего личность ребенка (паспорт или свидетельство о рождении).  </p>
+                  <p class="text">2. Путевку, которую можно предъявить в электронном или распечатанном виде.   </p>
+                  <p>Необходимости распечатывать путевку нет, если вы можете предъявить её на мобильном устройстве.</p>
+                </div>
+            </div>
+        </section>  
+    </main>
+
+    <footer>
+        <div class="container footer__container">
+          <hr class="footer__image ">
+          <div class="footer__flex">
+            <div class="text">
+              <p class="text__line">2024 © Департамент по организации отдыха и оздоровления детей. <br> Все услуги лицензированы.</p>
+              <p>Политика конфиденциальности</p>
+              <p>Публичная оферта</p>
+            </div>
+            <div class="social-links">
+              <a href="/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="/"><i class="fa-brands fa-telegram"></i></a>
+              <a href="/"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
