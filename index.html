@@ -26,13 +26,13 @@
         .ticket { width: 100%; max-width: 1090px; }
         .ticket__overflow { overflow: hidden; }
         .ticket__round { border-radius: 30px; background-color: white; display: grid; grid-template-columns: repeat(10, 1fr); padding-top: 11px; padding-bottom: 11px; border: 1px solid black; z-index: 1; }
-        .ticket__relative { position: relative; grid-column: span 2; width: 100%; height: 100%; transform: translate(9%, 30%);  }
+        .ticket__relative { position: relative; grid-column: span 2; width: 100%; height: 100%; transform: translate(10%, 30%);  }
         
-        .ticket__rotate { transform: rotate(-90deg); display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 180px; position: relative; text-align: center; }
+        .ticket__rotate { transform: rotate(-90deg); display: flex; flex-direction: column; gap: 10px; width: 100%; position: relative; text-align: center; }
         .ticket__flex { display: flex; flex-direction: column; gap: 2px; text-align: center; }
         .ticket__flex .ticket__text--black { color: black; font-size: 15px; }
         .ticket__flex h3 { font-size: 40px; }
-        .ticket__hw { padding-top: 2px; padding-bottom: 5px; height: 27px; text-align: center; }
+        .ticket__hw { padding-bottom: 6px; height: 27px; text-align: center; }
         .ticket__cl--bold { color: black;font-weight: 700; font-size: 9px; white-space: nowrap; }
 
         .ticket__absolute--1 { position: absolute; width: 50px; height: 56px; border-radius: 47%; background-color: white; border-width: 1px; border-style: solid; border-color: black; right: -36px; top: 70%; z-index: 2; }
@@ -55,7 +55,7 @@
         .ticket__flex--long { display: flex; justify-content: space-between; margin-top: 17px; }
         .ticket__flex--long .ticket__flex--column1 { display: flex; flex-direction: column; gap: 12px; }
         .ticket__flex--long .ticket__flex--column2 { display: flex; flex-direction: column; gap: 4px; }
-        .ticket__flex--long .ticket__flex--column2 .ticket__text--black { color: #000000; font-size: 12px; }
+        .ticket__flex--long .ticket__flex--column2 .ticket__text--black { color: #000000; font-size: 11px; }
         .ticket__flex--long .ticket__flex--column2 .ticket__text--black-bold { font-size: 11px; }
 
         .ticket__absolute--up { position: absolute; width: 230px; height: 258px; border-radius: 258px; background-color: white; border-width: 1px; border-style: solid; border-color: black; top: -83px; left: -225px; z-index: 1; }
@@ -78,7 +78,7 @@
         .footer__flex { display: flex; align-items: center; justify-content: space-between; gap: 1px; padding-top: 14px; }
         .text { width: 80%; display: flex; align-items: baseline; gap: 5px; color: #212121f3; font-size: 9px; font-weight: 400; }
         .text p { margin-right: 20px; }
-        .text .text__line { width: 40%;}
+        .text .text__line { width: 34%;}
         .social-links { font-size: 14px; }
         .social-links a { text-decoration: none; margin-right: 8px; }
     </style>
@@ -121,7 +121,7 @@
                           </h4>
                         </div>
                         <div class="ticket__hw">
-                          <img src="./assets/br.jpg" alt="br" style="text-align: center; height: 36px; width: 100%;">
+                          <img src="./assets/br.jpg" alt="br" style="text-align: center; height: 30px; width: 100%; transform: translate(13%, 0%); ">
                         </div>
                         <h6 class="ticket__cl--bold">
                           Дата покупки 01-03-2024 10:51
