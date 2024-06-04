@@ -39,8 +39,8 @@
         .ticket__absolute--2 { position: absolute; width: 50px; height: 56px; border-radius: 47%; background-color: white; border-width: 1px; border-style: solid; border-color: black; right: -36px; bottom: 130%; z-index: 2; }
 
         .ticket__column { grid-column: span 7; padding-left: 20px; width: 100%; /* border-left-width: 1px; */ /* border-style: dashed; */ border-left: dashed; border-color: black; margin-left: 21px;  }
-        .ticket__fl { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(79, 79, 79, 0.462); border-bottom-style: dashed; width: 100%; padding-bottom: 10px; }
-        .ticket__fl2 { /* flex flex-col gap-[4px] mb-[17px] */ display: flex; flex-direction: column; gap: 4px; margin-bottom: 13px; }
+        .ticket__fl { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(79, 79, 79, 0.462); border-bottom-style: dashed; width: 100%; padding-bottom: 5px; }
+        .ticket__fl2 { /* flex flex-col gap-[4px] mb-[17px] */ display: flex; flex-direction: column; gap: 4px; margin-bottom: 11px; }
         .ticket__fl2 .ticket__text--black { color: black; font-size: 10px; }
         .ticket__fl2 .ticket__text--black-font { color: black; font-weight: 700; font-size: 11px;}
         .ticket__fl3 { display: flex; flex-direction: column; gap: 4px; margin-bottom: 9px; }
@@ -52,19 +52,19 @@
         .ticket__width--full .ticket__gap .ticket__text--center-text { text-align: center; color: black; font-size: 15px; }
         .ticket__width--full .ticket__gap img { width: 100%; margin: 0 auto; }
         
-        .ticket__flex--long { display: flex; justify-content: space-between; margin-top: 17px; }
-        .ticket__flex--long .ticket__flex--column1 { display: flex; flex-direction: column; gap: 12px; }
+        .ticket__flex--long { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+        .ticket__flex--long .ticket__flex--column1 { display: flex; flex-direction: column; }
         .ticket__flex--long .ticket__flex--column2 { display: flex; flex-direction: column; gap: 4px; }
         .ticket__flex--long .ticket__flex--column2 .ticket__text--black { color: #000000; font-size: 11px; }
-        .ticket__flex--long .ticket__flex--column2 .ticket__text--black-bold { font-size: 11px; }
+        .ticket__flex--long .ticket__flex--column2 .ticket__text--black-bold { font-size: 9px; }
 
-        .ticket__absolute--up { position: absolute; width: 230px; height: 258px; border-radius: 258px; background-color: white; border-width: 1px; border-style: solid; border-color: black; top: -83px; left: -225px; z-index: 1; }
+        .ticket__absolute--up { position: absolute; width: 230px; height: 258px; border-radius: 258px; background-color: white; border-width: 1px; border-style: solid; border-color: black; top: -80px; left: -225px; z-index: 1; }
         /* Main Section Styles */
-        .main-section { padding: 31px 0; }
+        .main-section { padding: 30px 0; }
         .top__br { border-top: 1px solid rgba(79, 79, 79, 0.462); border-top-style: dashed; }
         .main-section__container2 { max-width: 875px; margin: 0 auto; }
         .main-section h1 { margin-top: 5px; margin-bottom: 17px; }
-        .main-section2 { padding-top: 21px; padding-bottom: 17px; }
+        .main-section2 { padding-top: 20px; padding-bottom: 14px; }
         .main-section2 .h2 { font-size: 21px; margin-bottom: 3px; }
         .contents { padding: 15px 0; border-bottom: 1px solid rgb(212, 212, 212); }
         .contents .contents__image { padding: 18px; }
@@ -74,13 +74,13 @@
         .contents .text { padding: 2px 5px; font-size: 12px; }
         .contents .cl { color: #00428E; text-decoration: none; }
         /* Footer Styles */
-        footer { padding: 22px 0; }
-        .footer__flex { display: flex; align-items: center; justify-content: space-between; gap: 1px; padding-top: 14px; }
-        .text { width: 76%; display: flex; align-items: baseline; gap: 4px; color: #212121f3; font-size: 8.8px; font-weight: 400; }
-        .text p { margin-right: 16px; }
-        .text .text__line { width: 35%;}
-        .social-links { font-size: 14px; }
-        .social-links a { text-decoration: none; margin-right: 7px; }
+        footer { padding: 20px 0; }
+        .footer__flex { display: flex; align-items: center; justify-content: space-between; gap: 1px; padding-top: 12px; }
+        .text { width: 73%; display: flex; align-items: baseline; color: #212121f3; font-size: 8.8px; font-weight: 400; }
+        .text p { margin-right: 10px; }
+        .text .text__line { width: 43%;}
+        .social-links { font-size: 13px;}
+        .social-links a { text-decoration: none;  display: inline; padding-right: 5px;}
     </style>
 </head>
 <body> <!-- onload="window.print()" -->
@@ -121,7 +121,7 @@
                           </h4>
                         </div>
                         <div class="ticket__hw">
-                          <img src="./assets/br.jpg" alt="br" style="text-align: center; height: 30px; width: 100%; transform: translate(13%, 0%); ">
+                          <img src="./assets/br.jpg" alt="br" style="text-align: center; height: 30px; width: 100%; transform: translate(15%, 0%); ">
                         </div>
                         <h6 class="ticket__cl--bold">
                           Дата покупки 01-03-2024 10:51
@@ -170,8 +170,8 @@
                         </div>
                       </div>
                       <div class="ticket__flex--long">
-                        <div class="ticket__flex--column1">
-                          <div class="ticket__flex--column2">
+                        <div class="ticket__flex--column1" style="width: 65%;">
+                          <div class="ticket__flex--column2" style="padding-bottom: 3px;">
                             <p class="ticket__text--black">
                               Точка сбора
                             </p>
@@ -190,7 +190,7 @@
                           </div>
                         </div>
                         <div class="ticket__flex--column1">
-                          <div class="ticket__flex--column2">
+                          <div class="ticket__flex--column2" style="padding-bottom: 3px;">
                             <p class="ticket__text--black">
                               Дата и время выезда
                             </p>
@@ -247,7 +247,7 @@
           <hr class="footer__image ">
           <div class="footer__flex">
             <div class="text">
-              <p class="text__line">2024 © Департамент по организации отдыха и оздоровления детей. <br> Все услуги лицензированы.</p>
+              <p class="text__line">2024 © Болаларни соғломлаштириш ва дам олишни ташкил этиш бўйича департаменти. <br> Барча хизматлар лицензияланган.</p>
               <p>Политика конфиденциальности</p>
               <p>Публичная оферта</p>
             </div>
